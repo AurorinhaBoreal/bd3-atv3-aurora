@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --c-black: rgb(52, 52, 52);
+    --c-yellow: #f2dd6eff;
+    --c-lightOrange: #e5b25dff;
+    --c-darkOrange: #c84630ff;
+    --c-white: #e8e1efff;
+}
