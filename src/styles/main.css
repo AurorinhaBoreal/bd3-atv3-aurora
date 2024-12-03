@@ -5,7 +5,7 @@
 
 
 :root {
-    --c-black: rgb(52, 52, 52);
+    --c-black: #343434;
     --c-yellow: #f2dd6eff;
     --c-lightOrange: #e5b25dff;
     --c-darkOrange: #c84630ff;

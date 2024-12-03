@@ -1,0 +1,7 @@
+.pageBody {
+  height: 90vh;
+  background-image: url("/firebase-home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

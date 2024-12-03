@@ -1,14 +1,15 @@
+import '../styles/main.css'
 import Header from '../components/Header'
 import List from '../components/List'
 import RegisterForm from '../components/RegisterForm'
-import '../styles/main.css'
+import styles from './home.module.css'
 
 function Home() {
 
   return (
     <>
       <Header/>
-      <div style={{display: "flex"}}>
+      <div className={styles.pageBody} style={{display: "flex"}}>
         <RegisterForm/>
         <List/>
       </div>
