@@ -4,4 +4,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  justify-content: space-between;
+  padding: 0 20vh;
 }

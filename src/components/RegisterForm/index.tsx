@@ -65,113 +65,158 @@ const RegisterForm = () => {
     }
 
     return (
-        <div className={styles.listWrapper}>
-            <h3>
+        <div className={styles.divWrapper}>
+            <h3 className={styles.formTitle}>
                 Register your Student
             </h3>
             <Formik
                 initialValues={initialValues}
                 validationSchema={RegisterSchema}
-                onSubmit={values => {
+                onSubmit={async (values, {resetForm}) => {
                     CreateUser(values)
-                    console.log({...values});
+                    resetForm()
                 }}
             >
                 <Form>
-                    <div className={styles.firstNameI}>
-                        <label htmlFor='firstName_input'>First Name</label>
-                        <Field
-                            id='firstName_input'
-                            type='text'
-                            placeholder='Aurora'
-                            name='firstName'
-                        />
-                        <ErrorMessage name="firstName"/>
+                    <div className={styles.doubleInputs}>
+                        <div>
+                            <ErrorMessage
+                                component='p'
+                                name="firstName"
+                                className={styles.inputError}
+                            />
+                            <Field
+                                className={styles.input}
+                                id='firstName_input'
+                                type='text'
+                                name='firstName'
+                                placeholder='First Name'
+                            />
+                        </div>
+                        <div>
+                            <ErrorMessage 
+                                component='p'
+                                name="lastName"
+                                className={styles.inputError}    
+                            />
+                            <Field
+                                className={styles.input}
+                                id='lastName_input'
+                                type='text'
+                                name='lastName'
+                                placeholder='Last Name'                            
+                            />
+                        </div>
                     </div>
-                    <div className={styles.lastNameI}>
-                        <label htmlFor='lastName_input'>Last Name</label>
-                        <Field
-                            id='lastName_input'
-                            type='text'
-                            placeholder='Rossi'
-                            name='lastName'
-                        />
-                        <ErrorMessage name="lastName"/>
+                    <div className={styles.doubleInputs}>
+                        <div>
+                            <ErrorMessage
+                                component='p'
+                                name="cpf"
+                                className={styles.inputError}
+                            />
+                            <Field
+                                className={styles.input}
+                                id='cpf_input'
+                                type='text'
+                                name='cpf'
+                                placeholder='CPF'
+                            />
+                        </div>
+                        <div>
+                            <ErrorMessage 
+                                component='p'
+                                name="rg"
+                                className={styles.inputError}    
+                            />
+                            <Field
+                                className={styles.input}
+                                id='rg_input'
+                                type='text'
+                                name='rg'
+                                placeholder='RG'                            
+                            />
+                        </div>
                     </div>
-                    <div className={styles.cpfI}>
-                        <label htmlFor='cpf_input'>CPF - Without Symbols</label>
-                        <Field
-                            id='cpf_input'
-                            type='text'
-                            placeholder='00000000000'
-                            name='cpf'
+                    <div className={styles.uniqueInput}>
+                        <ErrorMessage
+                            component='p'
+                            name="email"
+                            className={styles.inputError}  
                         />
-                        <ErrorMessage name="cpf"/>
-                    </div>
-                    <div className={styles.rgI}>
-                        <label htmlFor='rg_input'>RG - Without Symbols</label>
                         <Field
-                            id='rg_input'
-                            type='text'
-                            placeholder='12345678910'
-                            name='rg'
-                        />
-                        <ErrorMessage name="rg"/>
-                    </div>
-                    <div className={styles.studentNumberI}>
-                        <label htmlFor='studentNumber_input'>Student Number</label>
-                        <Field
-                            id='studentNumber_input'
-                            type='text'
-                            placeholder='(11) 930564158'
-                            name='studentNumber'
-                        />
-                        <ErrorMessage name="studentNumber"/>
-                    </div>
-                    <div className={styles.emailI}>
-                        <label htmlFor='email_input'>Email</label>
-                        <Field
+                            className={styles.inputLine}
                             id='email_input'
                             type='text'
-                            placeholder='email@gmail.com'
                             name='email'
+                            placeholder='Email'
                         />
-                        <ErrorMessage name="email"/>
                     </div>
-                    <div className={styles.birthDateI}>
-                        <label htmlFor='birthDate_input'>Birth Date</label>
-                        <Field
-                            id='birthDate_input'
-                            type='date'
-                            placeholder='12345678910'
-                            name='birthDate'
-                        />
-                        <ErrorMessage name="birthDate"/>
+                    <div className={styles.doubleInputs}>
+                        <div>
+                            <ErrorMessage 
+                                    component="p"
+                                    name="studentNumber"
+                                    className={styles.inputError}
+                            />
+                            <Field
+                                className={styles.input}
+                                id='studentNumber_input'
+                                type='text'
+                                placeholder='Student Number'
+                                name='studentNumber'
+                            />
+                        </div>
+                        <div>
+                            <ErrorMessage 
+                                component="p"
+                                name="birthDate"
+                                className={styles.inputError}
+                            />                        
+                            <Field
+                                className={styles.input}
+                                id='birthDate_input'
+                                type='date'
+                                placeholder='Birth Date'
+                                name='birthDate'
+                            />
+                        </div>
                     </div>
-                    <div className={styles.parentNameI}>
-                        <label htmlFor='parentName_input'>Parent Name</label>
-                        <Field
-                            id='parentName_input'
-                            type='text'
-                            placeholder='José de Pado'
-                            name='parentName'
-                        />
-                        <ErrorMessage name="parentName"/>
-                    </div>
-                    <div className={styles.parentNumberI}>
-                        <label htmlFor='parentNumber_input'>Parent Number</label>
-                        <Field
-                            id='parentNumber_input'
-                            type='text'
-                            placeholder='12345678910'
-                            name='parentNumber'
-                        />
-                        <ErrorMessage name="parentNumber"/>
+                    <div className={styles.doubleInputs}>
+                        <div>
+                            <ErrorMessage 
+                                    component="p"
+                                    name="parentName"
+                                    className={styles.inputError}
+                            />
+                            <Field
+                                className={styles.input}
+                                id='parentName_input'
+                                type='text'
+                                placeholder='Parent Name'
+                                name='parentName'
+                            />
+                        </div>
+                        <div>
+                            <ErrorMessage 
+                                component="p"
+                                name="parentNumber"
+                                className={styles.inputError}
+                            />                        
+                            <Field
+                                className={styles.input}
+                                id='parentNumber_input'
+                                type='text'
+                                placeholder='Parent Number'
+                                name='parentNumber'
+                            />
+                        </div>
                     </div>
                     <button
+                        className={styles.registerButton}
                         type="submit"
                     >
-                        Register Student
+                        Register
                     </button>
                 </Form>
             </Formik>

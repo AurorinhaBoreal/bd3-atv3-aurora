@@ -1,0 +1,76 @@
+.divWrapper {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: auto;
+    width: 30vw;
+    height: auto;
+    padding: 4vw 6vw;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formTitle {
+    color: var(--c-lightOrange);
+    font-size: 3vh;
+    margin-bottom: 4vh;
+}
+
+.uniqueInput {
+    width: inherit;
+    margin-bottom: 2vh;
+    justify-content: center;
+}
+
+.doubleInputs {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin-bottom: 2vh;
+    justify-content: space-between;
+}
+
+.input {
+    width: 100%;
+    height: 2.5vh;
+    border-radius: 8px;
+    color: rgba(46, 46, 46, 0.8);
+    text-indent: 2%;
+    font-size: 1.5vh;
+    font-weight: bold;
+}
+
+.inputLine {
+    width: 100%;
+    height: 2.5vh;
+    border-radius: 8px;
+    color: rgba(46, 46, 46, 0.8);
+    text-indent: 1%;
+    font-size: 1.5vh;
+    font-weight: bold;
+}
+
+.inputError {
+    color: crimson;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+}
+
+.doubleInputs > div > .inputError {
+    text-indent: 2%;
+}
+
+.uniqueInput > .inputError {
+    text-indent: 1%;
+}
+
+.registerButton {
+    height: 4vh;
+    width: 7vw;
+    background-color: var(--c-lightOrange);
+    margin-top: 4vh;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: large;
+}

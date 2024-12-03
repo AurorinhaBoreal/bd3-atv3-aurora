@@ -1,8 +1,10 @@
 .headerWrapper {
-    background-color: var(--c-black);
-    color: var(--c-lightOrange);
+    height: 10vh;
     display: flex;
     align-items: center;
+    background-color: var(--c-black);
+    color: var(--c-lightOrange);
+    font-family: 'Poppins', sans-serif;
 }
 
 .headerLogo {
