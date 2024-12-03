@@ -1,0 +1,28 @@
+.headerWrapper {
+    background-color: var(--c-black);
+    color: var(--c-lightOrange);
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    margin: 1vw;
+    width: 4vw;
+}
+
+h2.headerTitle {
+    font-size: 2.5vw;
+}
+
+.headerDivider {
+    height: 2.3vw;
+    width: 0.3vw;
+    background-color: var(--c-lightOrange);
+    border-radius: 20px;
+    border: none;
+    margin: 0 2vw;
+}
+
+.headerSlogan {
+    font-size: 1.2vw;
+}
