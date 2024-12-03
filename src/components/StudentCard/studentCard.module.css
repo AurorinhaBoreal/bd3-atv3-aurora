@@ -1,0 +1,52 @@
+.cardBody {
+    display: grid;
+    grid-template-columns: 60% 1% 39%;
+    padding: 2vh;
+    background-color: var(--c-white);
+    border: var(--c-lightOrange) solid 5px;
+    border-radius: 20px;
+    font-size: 1vw;
+    font-family: "Poppins", sans-serif;
+}
+
+.infoTitle {
+    opacity: 0.4;
+}
+
+.studentInfo, .parentInfo {
+    text-align: left;
+}
+
+.studentInfo {
+    /* display: flex; */
+}
+
+.infoName {
+    font-size: 0.5vw;
+}
+
+.firstLine {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.secondLine {
+
+}
+
+.thirdLine {
+
+}
+
+.infoDivider {
+    rotate: 90;
+    width: 2px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+.parentInfo {
+    padding-left: 0.5vw;
+}

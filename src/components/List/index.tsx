@@ -23,16 +23,16 @@ const List = () => {
     }, [students])
     
     return (
-        <div className={styles.list}>
-            <h3>See the registered Students</h3>
-            <div className={styles.cardWrapper}>
+        <div className={styles.divWrapper}>
+            <h3 className={styles.listTitle}>See the registered Students</h3>
+            <div className={styles.cardsWrapper}>
                 {students.length > 0 ? students.map((student) => (
                     <>
                         <StudentCard key={student.firstName+student.birthDate} student={student}/>    
                     </>
                 )) : (
                     <>
-                        <h3>There's no registered students on the database!</h3>
+                        <h3 className={styles.listDescription}>There are no registered students on the database!</h3>
                     </>
                 )}
             </div>

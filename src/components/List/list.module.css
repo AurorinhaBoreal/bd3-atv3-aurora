@@ -1,0 +1,29 @@
+.divWrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    width: 30vw;
+    height: auto;
+    padding: 2vw 4vw;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.listTitle {
+    color: var(--c-lightOrange);
+    font-size: 3vh;
+    margin-bottom: 4vh;
+}
+
+.listDescription {
+    color: var(--c-lightOrange);
+    font-size: 2vh;
+    margin-bottom: 4vh;
+}
+
+.cardsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
