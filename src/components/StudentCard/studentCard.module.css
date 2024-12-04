@@ -2,27 +2,31 @@
     display: grid;
     grid-template-columns: 60% 1% 39%;
     padding: 2vh;
-    background-color: var(--c-white);
-    border: var(--c-lightOrange) solid 5px;
+    border: 5px solid transparent;
     border-radius: 20px;
+    background: 
+        linear-gradient(to right, white, white), 
+        linear-gradient(#e5b25dff, #C84630);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
     font-size: 1vw;
     font-family: "Poppins", sans-serif;
 }
 
 .infoTitle {
     opacity: 0.4;
+    font-size: 1.2vw;
 }
 
 .studentInfo, .parentInfo {
     text-align: left;
 }
 
-.studentInfo {
-    /* display: flex; */
-}
-
 .infoName {
-    font-size: 0.5vw;
+    margin-top: 1vh;
+    line-height: 50%;
+    font-size: 0.6vw;
+    opacity: 0.4;
 }
 
 .firstLine {
@@ -31,11 +35,8 @@
 }
 
 .secondLine {
-
-}
-
-.thirdLine {
-
+    display: flex;
+    gap: 0.5vw;
 }
 
 .infoDivider {
@@ -49,4 +50,11 @@
 
 .parentInfo {
     padding-left: 0.5vw;
+}
+
+.alignedInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
 }
